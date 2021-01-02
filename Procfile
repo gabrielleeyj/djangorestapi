@@ -1,1 +1,1 @@
-web: gunicorn pollsapi:app
+web: gunicorn pollsapi:application
