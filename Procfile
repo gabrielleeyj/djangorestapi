@@ -1,1 +1,1 @@
-web: gunicorn pollsapi.wsgi
+web: gunicorn pollsapi.wsgi:app
