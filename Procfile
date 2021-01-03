@@ -1,0 +1,1 @@
+web: gunicorn ./pollsapi/pollsapi.wsgi
