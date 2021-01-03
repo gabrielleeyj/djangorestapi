@@ -27,7 +27,7 @@ router.register('polls', PollViewSet, basename='polls')
 
 urlpatterns = [
     path("login/", views.obtain_auth_token, name="login"),
-    path("login/", LoginView.as_view(), name="login"),
+    # path("login/", LoginView.as_view(), name="login"),
     path("users/", UserCreate.as_view(), name="user_create"),
     path("polls/<int:pk>/choices/", ChoiceList.as_view(), name="polls_list"),
     path("polls/<int:pk>/choices/<int:choice_pk>/vote/",
