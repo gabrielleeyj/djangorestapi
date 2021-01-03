@@ -2,7 +2,7 @@ from django.urls import path
 from .apiviews import ChoiceList, CreateVote, PollViewSet, UserCreate, LoginView
 
 from rest_framework.routers import DefaultRouter
-
+from rest_framework.authtoken import views
 from rest_framework.documentation import include_docs_urls
 from rest_framework import permissions
 from drf_yasg import openapi
@@ -26,6 +26,7 @@ router.register('polls', PollViewSet, basename='polls')
 
 
 urlpatterns = [
+    path("login/", views.obtain_auth_token, name="login"),
     path("login/", LoginView.as_view(), name="login"),
     path("users/", UserCreate.as_view(), name="user_create"),
     path("polls/<int:pk>/choices/", ChoiceList.as_view(), name="polls_list"),
