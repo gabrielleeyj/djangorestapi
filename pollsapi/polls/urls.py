@@ -31,8 +31,8 @@ urlpatterns = [
     path("polls/<int:pk>/choices/", ChoiceList.as_view(), name="polls_list"),
     path("polls/<int:pk>/choices/<int:choice_pk>/vote/",
          CreateVote.as_view(), name="polls_list"),
-    path('/', schema_view.with_ui('swagger',
-                                  cache_timeout=0), name='schema-swagger-ui'),
+    path('', schema_view.with_ui('swagger',
+                                 cache_timeout=0), name='schema-swagger-ui'),
     path('redoc/', schema_view.with_ui('redoc',
                                        cache_timeout=0), name='schema-redoc'),
 ]
