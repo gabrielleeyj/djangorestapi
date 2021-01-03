@@ -15,5 +15,5 @@ from whitenoise import WhiteNoise
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'pollsapi.settings')
 
 application = get_wsgi_application()
-application = WhiteNoise(application, root='/path/to/static/files')
-application.add_files('/path/to/more/static/files', prefix='more-files/')
+application = WhiteNoise(application, root='/pollsapi/static/')
+application.add_files('/pollsapi/static/', prefix='files/')
