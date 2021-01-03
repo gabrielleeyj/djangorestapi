@@ -1,1 +1,1 @@
-web: gunicorn pollsapi.wsgi:application
+web: gunicorn --pythonpath pollsapi pollsapi.wsgi
